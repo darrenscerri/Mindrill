@@ -54,7 +54,6 @@ class Mindrill
 			$url .= '.json';
 		}
 		
-		var_dump($url);
 		$params = array_merge($params, array('key'=>$this->api_key));
 		
 		$json = json_encode($params);
