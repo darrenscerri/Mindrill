@@ -70,13 +70,8 @@ class Mindrill
 		curl_close($ch);
 		$decoded = json_decode($result);
 		
-		if (is_null($decoded))
-		{
-			return $result;
-		} else
-		{
-			return $decoded;
-		}
+		return is_null($decoded) ? $result : $decoded;
+
 	}
 	
 	/**
